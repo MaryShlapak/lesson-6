@@ -109,8 +109,6 @@ print(numbers)
 
 deleted_number = int(input("Enter the number you want to delete: "))
 
-
-
 def delete_num (numbers, number):
     num_of_del = numbers.count(number)
     while number in numbers:
@@ -137,3 +135,31 @@ def comb_list (first_list,second_list):
 
 result = comb_list(first_list,second_list)
 print("Combined list: ", result)
+
+# Завдання 6
+#
+# Напишіть функцію, яка обчислює ступінь кожного елемента списку цілих.
+# Значення для ступеня передається як параметр, список також передається як параметр.
+# Функція повертає новий список, який містить отримані результати.
+
+import random
+
+digits_number = 10
+numbers = []
+
+for i in range(digits_number):
+  numbers.append(random.randint (1,10))
+
+print(numbers)
+
+power = int(input("Enter the power of numbers: "))
+
+def num_pow (numbers, power):
+    result = []
+    for num in numbers:
+        result.append(num ** power)
+    return result
+
+result = num_pow(numbers, power)
+
+print("The list of numbers brought to a power: ", result)
